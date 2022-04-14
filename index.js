@@ -9,8 +9,8 @@ const app = express();
 app.use(cors());
 app.use(formidable());
 
-// mongoose.connect(process.env.MONGODB_URI);
-mongoose.connect("mongodb://localhost:27017");
+mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect("mongodb://localhost:27017");
 
 const signupRoutes = require("./routes/users");
 app.use(signupRoutes);
